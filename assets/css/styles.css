@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
     margin: 0;
     background-color: #FFE6E6;
+}
+
+.dark-mode {
+    background-color: #222222;
+    color: white;   
 }
 
 #home {
@@ -29,7 +41,7 @@ header .navbar {
     z-index: 9999;
     position: fixed;
     top: 0;
-    height: 30px;
+    height: 65px;
     color: white;
 }
 
@@ -118,4 +130,26 @@ header .navbar .nav-list li:hover a {
     height: 100vh;
     justify-content: flex-start;
     align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    header .navbar{
+        width: 100vw;
+    }
+    
+    header .navbar .nav-list ul{
+        padding-right: 25px;
+    }
+
+    header .navbar .nav-list li a{
+        padding: 5px;
+    }
+
+    #gallery img {
+        width: 150px;
+    }
+
+    .blog-container {
+        flex-direction: column;
+    }
 }
